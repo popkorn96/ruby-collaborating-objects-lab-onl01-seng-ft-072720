@@ -26,7 +26,6 @@ class Artist
     new_artist
   end
   end
-
   def print_songs()
     puts @songs.collect{|songs| songs.name}
   end
