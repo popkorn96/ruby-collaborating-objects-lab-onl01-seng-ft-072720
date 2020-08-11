@@ -13,17 +13,15 @@ class Song
   
  
   def artist_name=(artist_name)
-    if Artist.all.detect{|name| name.name == artist_name}
-      self.artist = Artist.all.detect{|name| name.name == artist_name}
-    else 
-      self.artist = Artist.new(artist_name)
-    end
+    self.artist = Artist.find_or_create_by_name(name)
   end
   def self.new_by_filename(filename)
-    song_info = file.split(" - ")
-    song = Song.new(song_info[1])
-    song.artist_name = song_info[0]
-    song
+    file = filename.split("-")
+    artist = file[0].strip
+    song = file[1].strip
+    song_new = Song.new(song)
+    song_new.artist_name = artist 
+    song_new
   end
   
   
