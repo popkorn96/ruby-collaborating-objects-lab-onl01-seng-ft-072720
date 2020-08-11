@@ -26,14 +26,7 @@ class Artist
     new_artist
   end
   end
-  def self.find(name)
-    @@all.find{|artist| artist.name = name}
-  end
-  def self.create(name)
-    artist = Artist.new(name)
-    @@all << artist
-    artist
-  end
+
   def print_songs()
     puts @songs.collect{|songs| songs.name}
   end
