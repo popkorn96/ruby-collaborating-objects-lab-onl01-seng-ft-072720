@@ -18,6 +18,7 @@ class Song
     else 
       self.artist = Artist.new(artist_name)
     end
+    artist.add_song(self)
   end
   def self.new_by_filename(filename)
     file = filename.split("-")
