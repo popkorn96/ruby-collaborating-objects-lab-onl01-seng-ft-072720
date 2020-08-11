@@ -5,7 +5,7 @@ class Song
     @name = name 
     @artist = artist
     @@all << self
-    save
+    
   end 
   
   #   creates a new instance of a song from the file that's passed (FAILED - 1)?
