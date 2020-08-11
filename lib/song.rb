@@ -20,7 +20,7 @@ class Song
     file = filename.chomp(".mp3").split(" - ")
     song = self.new(file[1])
     artist = self.new(file[0])
-    self.new.artist = @artist
+    self.artist = artist
     song
     
   end
