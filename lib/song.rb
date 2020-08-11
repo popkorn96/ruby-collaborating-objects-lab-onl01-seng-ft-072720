@@ -22,7 +22,7 @@ class Song
     artist_name = self.new(file[0])
     artist_name = @artist
     self.artist = artist_name
-    song
+    return song
     
   end
   
