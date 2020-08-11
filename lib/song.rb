@@ -21,6 +21,7 @@ class Song
     song = self.new(file[1])
     artist_name = self.new(file[0])
     artist_name = @artist
+    self.artist = artist_name
     song
     
   end
