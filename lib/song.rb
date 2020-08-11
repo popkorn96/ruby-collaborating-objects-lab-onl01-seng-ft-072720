@@ -7,7 +7,7 @@ class Song
     @@all << self
   end 
   
-  #   creates a new instance of a song from the file that's passed (FAILED - 1)
+  #   creates a new instance of a song from the file that's passed (FAILED - 1)?
   #  associates new song instance with the artist from the filename (FAILED - 2)
   
  
@@ -19,7 +19,7 @@ class Song
     file = filename.chomp(".mp3").split(" - ")
     song = self.new(file[1])
     artist = self.new(file[0])
-    @artist = artist
+    self.new.artist = @artist
     song
     
   end
